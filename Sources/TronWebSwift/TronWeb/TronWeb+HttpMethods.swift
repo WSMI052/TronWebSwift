@@ -37,7 +37,7 @@ public enum TronWebRequestType: String {
         case .triggerConstantContract:
             return "/wallet/triggerconstantcontract"
         case .broadcastTransaction:
-            return "/wallet/broadcasthex"
+            return "/wallet/broadcasttransaction"
         }
     }
 }
