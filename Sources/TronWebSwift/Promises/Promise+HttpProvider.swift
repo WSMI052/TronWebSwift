@@ -63,10 +63,10 @@ extension TronWebHttpProvider {
     
     public func triggerSmartContract(_ request: TronTriggerSmartContractExtension) -> Promise<Protocol_TransactionExtention> {
         let parameters: [String: Encodable] = [
-            "owner_address": request.contract.ownerAddress.toHexString(),
-            "contract_address": request.contract.contractAddress.toHexString(),
+            "owner_address": String(data: request.contract.ownerAddress, encoding: .utf8),
+            "contract_address": String(data: request.contract.contractAddress, encoding: .utf8),
             "function_selector": request.functionSelector,
-            "parameter": request.parameter.toHexString(),
+            "parameter": String(data: request.parameter, encoding: .utf8),
             "fee_limit": request.feeLimit,
             "call_value": request.contract.callValue,
             "token_id": request.contract.tokenID,
