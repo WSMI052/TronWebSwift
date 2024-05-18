@@ -86,6 +86,11 @@ public struct TronTriggerSmartContractExtension {
         }
         return contract.data.suffix(from: 4)
     }
+    public init(contract: Protocol_TriggerSmartContract, functionSelector: String, feeLimit: Int64) {
+        self.contract = contract
+        self.functionSelector = functionSelector
+        self.feeLimit = feeLimit
+    }
 }
 
 public struct TronTransactionSendingResult: Decodable {
