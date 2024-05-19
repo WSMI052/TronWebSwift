@@ -71,7 +71,7 @@ extension TronWebHttpProvider {
             "call_value": request.contract.callValue,
             "token_id": request.contract.tokenID,
             "call_token_value": request.contract.callTokenValue,
-            "visible": false
+            "visible": true
         ]
         let providerURL = self.url.appending(.triggerSmartContract)
         return TronWebHttpProvider.POST(parameters, providerURL: providerURL, session: self.session)
